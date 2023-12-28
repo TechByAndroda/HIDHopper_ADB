@@ -6,7 +6,7 @@ set(PICO_BOARD_HEADER_DIRS ${CMAKE_SOURCE_DIR}/boards)
 # note: this must happen before project()
 include(pico_sdk_import.cmake)
 
-project(QuokkADB-firmware)
+project(HIDHopper-firmware)
 
 # initialize the Raspberry Pi Pico SDK
 pico_sdk_init()

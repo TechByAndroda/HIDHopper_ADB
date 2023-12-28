@@ -1,4 +1,6 @@
 //----------------------------------------------------------------------------
+//  HIDHopper ADB
+//  This project is based on QuokkADB:
 //
 //  QuokkADB ADB keyboard and mouse adapter
 //     Copyright (C) 2011 Circuits At Home, LTD. All rights reserved.
@@ -85,6 +87,7 @@ struct KBDINFO {
                 uint8_t bmRightShift : 1;
                 uint8_t bmRightAlt : 1;
                 uint8_t bmRightGUI : 1;
+                uint8_t bmDelete : 1;
         };
         uint8_t bReserved;
         uint8_t Keys[6];

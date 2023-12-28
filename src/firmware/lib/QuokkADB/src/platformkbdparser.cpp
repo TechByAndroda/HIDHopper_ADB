@@ -1,4 +1,6 @@
 //----------------------------------------------------------------------------
+//  HIDHopper ADB
+//  This project is based on adbuino and QuokkADB:
 //
 //  QuokkADB ADB keyboard and mouse adapter
 //     Copyright (C) 2011 Circuits At Home, LTD. All rights reserved.
@@ -30,6 +32,7 @@
 #include "platform_config.h"
 #include "char2usbkeycode.h"
 #include "flashsettings.h"
+#include "hardware/pio.h"
 #include <tusb.h>
 
 #if QUOKKADB
@@ -37,6 +40,8 @@
 using rp2040_serial::Serial;
 #endif
 
+#define MAIN_PIO pio0
+#define PWR_SM 0
 #define VALUE_WITHIN(v,l,h) (((v)>=(l)) && ((v)<=(h)))
 #define pgm_read_byte(addr) (*(const unsigned char *)(addr))
 
@@ -101,6 +106,9 @@ void PlatformKbdParser::Parse(uint8_t dev_addr, uint8_t instance, hid_keyboard_r
         cur_kbd_info->bmRightShift = findModifierKey(report, KEYBOARD_MODIFIER_RIGHTSHIFT);
         cur_kbd_info->bmRightAlt =   findModifierKey(report, KEYBOARD_MODIFIER_RIGHTALT);
         cur_kbd_info->bmRightGUI =   findModifierKey(report, KEYBOARD_MODIFIER_RIGHTGUI);
+
+        // HID_KEY_DELETE is the constant for the delete key
+
         memcpy(cur_kbd_info->Keys, report->keycode, 6);
         cur_kbd_info->bReserved =  report->reserved;
         
@@ -157,10 +165,10 @@ void PlatformKbdParser::SetUSBkeyboardLEDs(bool capslock, bool numlock, bool scr
 
 bool PlatformKbdParser::SpecialKeyCombo(KBDINFO *cur_kbd_info)
 {
-        // Special keycombo actions
+        // Special keycombo actions, ghost type happens here
         uint8_t special_key_count = 0;
         uint8_t special_key = 0;
-        uint8_t special_keys[] = { USB_KEY_V, USB_KEY_L};
+        uint8_t special_keys[] = { USB_KEY_V, USB_KEY_L}; //, USB_KEY_DELETE};
         uint8_t caps_lock_down = false;
         
         for (uint8_t i = 0; i < 6; i++)

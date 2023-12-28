@@ -1,39 +1,43 @@
+# HIDHopper ADB
+
+HIDHopper ADB is a modified (forked) version of [adbuino](https://github.com/akuker/adbuino) and QuokkADB.  It is a Raspberry Pi Pico based hardware device which converts USB keyboard and mouse inputs to the Apple Desktop Bus (ADB) standard.
+
+# Usage
+See the [Wiki Page Here]() for usage instructions.
+
+# Quick Usage
+- For Base HIDHopper without USB Hub, plug into ADB and plug in your USB peripheral (mouse or keyboard).  Done.
+- If you ordered the USB Hub, you *must use external power* to avoid blowing the ADB power fuse on your motherboard.  Power via the USB-C connector on the hub.
+- Plug in desired USB keyboard and mouse, and go.
+
 # Background
 
 This is a fork of Difegue's version of the [adbuino](https://github.com/Difegue/Chaotic-Realm), which was a modified version of [bbraun's](http://synack.net/svn/adbduino/) PS/2 to ADB arduino sketch, with some extra code added to alleviate issues with his own PS/2 keyboard.  For Difegue's original write-up, please read more info [here.](https://tvc-16.science/adbuino-ps2.html).
 
-![ADBuino picture](images/adbuino_0p9.png)
-
-# QuokkADB
-
-QuokkADB is a modified version of [adbuino](https://github.com/akuker/adbuino). It is targeted to the Rabbit Hole Computing's QuokkADB device. QuokkADB is a Raspberry Pi RP2040 based device that takes in USB inputs from a keyboard and/or mouse and outputs Apple's ADB (Apple Desktop Bus).  Further information can be found in the [QuokkADB.md](QuokkADB.md) file. 
-
-# Hack-y Alternative
-The USB ADBuino is essentially a "value-engineered" version of a bunch of off-the-shelf components. 
-
-<a href="https://www.sparkfun.com/products/11021"><img src="images/arduino_uno.jpg" width="150"/></a> <a href="https://www.sparkfun.com/products/9947"><img src="images/host_shield.jpg" width="150"/></a> 
-<a href="https://www.sparkfun.com/products/12009"><img src="images/logic_level_converter.jpg" width="150"/></a>
-
-<img src="images/hacky_adbuino.png" width="600"/>
-
-# How to build and flash an adbuino
+# How to build and flash HIDHopper ADB
 
 Note: This software is intended to be compiled in an Ubuntu Linux environment.
 
-Any dependencies that are configured in the PlatformIO project (such as TinyUSB) will automatically be downloaded. Make sure you are connected to the Internet the first time you build this software.
-
-- Install [Visual Studio Code](https://code.visualstudio.com/)
-- Install [Platform IO](https://platformio.org/install)
-- Open Visual studio Code and open the directory ./src/adbuino
-- Select the PlatformIO icon on the left
-- Execute the `Build` project task
-- Execute the `Upload` project task to flash your device
+- Install the Raspberry Pi Pico SDK (https://github.com/raspberrypi/pico-sdk)
+- Set the `$PICO_SDK_PATH` environment variable to your pico-sdk directory
+- Open a Terminal and "cd" into this project
+- From the top level of this project, "cd" to the `src/firmware` folder
+- In Terminal, execute the following commands from the above `src/firmware` folder:
+- `mkdir build`
+- `cd build`
+- `cmake ..`
+- `make`
+- The build outputs (.uf2, .bin, .elf, etc) will be placed in this folder (path is from the top level of the project):
+- `src/firmware/build/src`
+- Next, plug the micro-USB side of a USB cable into HIDHopper
+- Press the button on the Pico stick with a pencil or paperclip through the indicated hole on the case
+- While holding down the button, plug the USB cable into your computer (then release the button after plugging in)
+- You should see an "RPI-RP2" mass storage device appear on your computer
+- Drag the ".uf2" file onto that mass storage device
+- Once the mass storage device disappears, wait 10 seconds and then you are free to unplug
 
 # What's this repo for?
-
-The intent of this repository is to add "USB Host" support to the original ADB design. This will allow a USB keyboard and/or mouse to be used to drive an ADB host, as well as PS/2. 
-
-The [BMOW "Wombat"](https://www.bigmessowires.com/usb-wombat/) is a closed-source alternative to adbuino. The [BMOW "Wombat"](https://www.bigmessowires.com/usb-wombat/) is an AWESOME project, but doesn't allow external contributors. 
+This repo houses the HIDHopper ADB fork of adbuino and QuokkADB.
 
 # References
 ![ADB Pinout](images/adb_pinout.png)

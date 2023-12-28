@@ -1,4 +1,6 @@
 //---------------------------------------------------------------------------
+//  HIDHopper ADB
+//  This project is based on QuokkADB:
 //
 //	QuokkADB ADB keyboard and mouse adapter
 //
@@ -28,11 +30,13 @@
 #include "quokkadb_gpio.h"
 #include "pico/mutex.h"
 #include "hardware/gpio.h"
+#include "hardware/pio.h"
 #include <pico/printf.h>
 
+#define MAIN_PIO pio0
+#define PWR_SM 0
+
 mutex_t led_mutex;
-
-
 
 extern bool global_debug;
 void adb_gpio_init(void) {
@@ -44,10 +48,7 @@ void adb_gpio_init(void) {
     gpio_init(ADB_IN_GPIO);
     gpio_set_dir(ADB_IN_GPIO, GPIO_IN);
 
-
 }
-
-
 
 void led_gpio_init(void) {
     gpio_init(LED_GPIO);
@@ -59,13 +60,10 @@ void led_gpio_init(void) {
 }
 
 void uart_gpio_init(void) {
-
     uart_init(UART_PORT, UART_TX_BAUD);
     gpio_set_function(UART_TX_GPIO, GPIO_FUNC_UART);
 
 }
-    
-
 
 // Blink the led n times
 void led_blink(uint8_t times) {

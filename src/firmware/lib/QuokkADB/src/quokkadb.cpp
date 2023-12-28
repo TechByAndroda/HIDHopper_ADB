@@ -1,4 +1,6 @@
 //---------------------------------------------------------------------------
+//  HIDHopper ADB
+//  This project is based on QuokkaADB:
 //
 //	QuokkaADB ADB keyboard and mouse adapter
 //
@@ -47,6 +49,7 @@
 #include "adbmouseparser.h"
 #include "flashsettings.h"
 #include "platform_config.h"
+#include "hardware/pio.h"
 
 using rp2040_serial::Serial;
 

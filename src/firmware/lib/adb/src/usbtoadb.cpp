@@ -1,4 +1,6 @@
 //---------------------------------------------------------------------------
+//  HIDHopper ADB
+//  This project is based on ADBuino and QuokkADB:
 //
 //	ADBuino & QuokkADB are ADB keyboard and mouse adapters
 //	   Copyright (C) 2021-2022 bbraun

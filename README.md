@@ -23,12 +23,12 @@ Note: This software is intended to be compiled in an Ubuntu Linux environment.
 - Open a Terminal and "cd" into this project
 - From the top level of this project, "cd" to the `src/firmware` folder
 - In Terminal, execute the following commands from the above `src/firmware` folder:
-- `mkdir build`
-- `cd build`
-- `cmake ..`
-- `make`
+  - `mkdir build`
+  - `cd build`
+  - `cmake ..`
+  - `make`
 - The build outputs (.uf2, .bin, .elf, etc) will be placed in this folder (path is from the top level of the project):
-- `src/firmware/build/src`
+  - `src/firmware/build/src`
 - Next, plug the micro-USB side of a USB cable into HIDHopper
 - Press the button on the Pico stick with a pencil or paperclip through the indicated hole on the case
 - While holding down the button, plug the USB cable into your computer (then release the button after plugging in)

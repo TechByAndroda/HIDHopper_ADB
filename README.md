@@ -1,6 +1,6 @@
 # HIDHopper ADB
 
-HIDHopper ADB is a modified (forked) version of [adbuino](https://github.com/akuker/adbuino) and QuokkADB.  It is a Raspberry Pi Pico based hardware device which converts USB keyboard and mouse inputs to the Apple Desktop Bus (ADB) standard.
+HIDHopper ADB is a modified (forked) version of adbuino and QuokkADB.  It is a Raspberry Pi Pico based hardware device which converts USB keyboard and mouse inputs to the Apple Desktop Bus (ADB) standard.
 
 # Usage
 See the file doc/HIDHopper.md for more full documentation
@@ -35,9 +35,6 @@ Note: This software is intended to be compiled in an Ubuntu Linux environment.
 - You should see an "RPI-RP2" mass storage device appear on your computer
 - Drag the ".uf2" file onto that mass storage device
 - Once the mass storage device disappears, wait 10 seconds and then you are free to unplug
-
-# What's this repo for?
-This repo houses the HIDHopper ADB fork of adbuino and QuokkADB.
 
 # References
 ![ADB Pinout](images/adb_pinout.png)

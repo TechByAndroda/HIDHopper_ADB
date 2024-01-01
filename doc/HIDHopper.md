@@ -4,11 +4,11 @@ This is for USB to ADB, and not currently the other way around.
 
 ## How to use
 1. Attach any USB keyboards/mice to your HIDHopper ADB hardware
-1a. If you have the USB Hub Hat, EXTERNAL POWER MUST BE PROVIDED via the USB-C port!  Otherwise you run the risk of burning out the ADB Power fuse on your Mac's motherboard!
-1b. If you have the USB Hub Hat, only the Hat's USB ports work.  The USB port on the base device (by microUSB) will stop working to handle the hub connection.
+   * If you have the USB Hub Hat, EXTERNAL POWER MUST BE PROVIDED via the USB-C port!  Otherwise you run the risk of burning out the ADB Power fuse on your Mac's motherboard!
+   * If you have the USB Hub Hat, only the Hat's USB ports work.  The USB port on the base device (by microUSB) will stop working to handle the hub connection.
 2. Ensure your HIDHopper device is plugged into your Mac before turning the computer on, and do not un-plug it (or plug it back in) while the system is running
 3. The button by the ADB port on HIDHopper is the ADB Soft-Power button and can turn on systems which support that (Color Classic, PowerMac 7300, etc)
-3a. Systems which do not support ADB Soft-Power must be turned on with their respective physical switch
+   * Systems which do not support ADB Soft-Power must be turned on with their respective physical switch
 4. LEDs will turn on and blink with power and ADB activity
 5. Again, DO NOT unplug HIDHopper from your Mac while it is turned on.  And DO NOT plug it into your Mac while it's turned on.  Only connect or disconnect while your Mac is turned off.
 
@@ -19,9 +19,13 @@ This is for USB to ADB, and not currently the other way around.
 
 Every HIDHopper ADB device comes with:
 * Two ADB ports, allowing daisy-chaining
-* One USB-A port
+* One USB-A port for keyboard/mouse (This port is disabled if you are using the Hub Hat)
 * One micro-USB port (for firmware upgrades)
 * One 4-pin jumper header for the USB Hub Hat
+
+![HIDHopper ADB Front Picture](../images/HIDHopper_Front_WithHat.jpg)
+![HIDHopper ADB Back Picture](../images/HIDHopper_Back_WithHat.jpg)
+
 
 # Other
 

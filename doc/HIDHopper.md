@@ -15,16 +15,19 @@ This is for USB to ADB, and not currently the other way around.
 
 # Hardware
 
-## Ports
+## Ports And Buttons
 
 Every HIDHopper ADB device comes with:
 * Two ADB ports, allowing daisy-chaining
 * One USB-A port for keyboard/mouse (This port is disabled if you are using the Hub Hat)
 * One micro-USB port (for firmware upgrades)
 * One 4-pin jumper header for the USB Hub Hat
+* An ADB Soft Power-on Button
+* A button for use in entering Firmware Update mode
 
 ![HIDHopper ADB Front Picture](../images/HIDHopper_Front_WithHat.jpg)
 ![HIDHopper ADB Back Picture](../images/HIDHopper_Back_WithHat.jpg)
+![HIDHopper ADB Back Picture](../images/HIDHopper_ADB_Buttons.jpg)
 
 
 # Other

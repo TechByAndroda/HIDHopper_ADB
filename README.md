@@ -2,6 +2,10 @@
 
 HIDHopper ADB is a modified (forked) version of adbuino and QuokkADB.  It is a Raspberry Pi Pico based hardware device which converts USB keyboard and mouse inputs to the Apple Desktop Bus (ADB) standard.
 
+# The Name
+HIDHopper comes from the USB "HID" standard, for Human Interface Device.  Hopper just sounded right after HID.
+
+# Picture
 ![HIDHopper_ADB Hardware Image](images/HIDHopper_Front_WithHat.jpg)
 
 # Usage

@@ -6,6 +6,7 @@ This is for USB to ADB, and not currently the other way around.
 1. Attach any USB keyboards/mice to your HIDHopper ADB hardware
    * If you have the USB Hub Hat, EXTERNAL POWER MUST BE PROVIDED via the USB-C port!  Otherwise you run the risk of burning out the ADB Power fuse on your Mac's motherboard!
    * If you have the USB Hub Hat, only the Hat's USB ports work.  The USB port on the base device (by microUSB) will stop working to handle the hub connection.
+   * The Hub Hat's USB-C Power must be un-plugged and plugged back in between each system start.  This is because certain parameters are set only on first ADB communication.
 2. Ensure your HIDHopper device is plugged into your Mac before turning the computer on, and do not un-plug it (or plug it back in) while the system is running
 3. The button by the ADB port on HIDHopper is the ADB Soft-Power button and can turn on systems which support that (Color Classic, PowerMac 7300, etc)
    * Systems which do not support ADB Soft-Power must be turned on with their respective physical switch
@@ -29,6 +30,13 @@ Every HIDHopper ADB device comes with:
 ![HIDHopper ADB Back Picture](../images/HIDHopper_Back_WithHat.jpg)
 ![HIDHopper ADB Back Picture](../images/HIDHopper_ADB_Buttons.jpg)
 
+
+# Compatibility
+HIDHopper ADB has been tested on the following systems that mouse movement and clicks work, as well as keyboard key inputs.
+* Beige G3
+* PowerMac 7300
+* PowerBook 180
+* Macintosh Portable
 
 # Other
 

@@ -12,9 +12,20 @@ HIDHopper comes from the USB "HID" standard, for Human Interface Device.  Hopper
 See the file [doc/HIDHopper.md](https://github.com/TechByAndroda/HIDHopper_ADB/blob/master/doc/HIDHopper.md) for more full documentation
 
 # Quick Usage
-- For Base HIDHopper without USB Hub, plug into ADB and plug in your USB peripheral (mouse or keyboard).  Done.
-- If you ordered the USB Hub, you *must use external power* to avoid blowing the ADB power fuse on your motherboard.  Power via the USB-C connector on the hub.
-- Plug in desired USB keyboard and mouse, and go.
+- For Base HIDHopper without USB Hub, *before* turning on your computer:
+   - Plug in your desired USB peripheral (keyboard or mouse)
+   - Plug HIDHopper into the ADB bus
+   - Start computer
+   - Hot-plug *is not supported*, don't unplug from the ADB Bus *or* unplug the USB device that is connected while the computer is on
+- For HIDHopper with the USB Hub Hat, *before* turning on your computer:
+   - Ensure the Hub is solidly secured in place with the two mounting screws and top cover plate
+   - Plug HIDHopper into the ADB bus
+   - Plug in your external 5v USB-C power supply to the connector on the Hub
+      - You *must use USB-C External Power* to avoid blowing the ADB Power fuse on your motherboard!
+   - Plug in your desired USB keyboard and mouse
+   - Hot-plug *is not supported*, don't unplug from the ADB Bus *or* unplug USB devices that are connected while the computer is on
+      - Hot-plug of USB devices is finicky, sometimes it works and other times it does not
+      - Best to connect before startup, that always works
 
 # Background
 

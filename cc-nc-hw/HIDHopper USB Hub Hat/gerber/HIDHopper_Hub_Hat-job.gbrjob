@@ -1,0 +1,127 @@
+{
+  "Header": {
+    "GenerationSoftware": {
+      "Vendor": "KiCad",
+      "Application": "Pcbnew",
+      "Version": "7.0.10-7.0.10~ubuntu22.04.1"
+    },
+    "CreationDate": "2024-01-13T04:47:40-07:00"
+  },
+  "GeneralSpecs": {
+    "ProjectId": {
+      "Name": "HIDHopper_Hub_Hat",
+      "GUID": "48494448-6f70-4706-9572-5f4875625f48",
+      "Revision": "rev?"
+    },
+    "Size": {
+      "X": 55.31,
+      "Y": 37.5
+    },
+    "LayerNumber": 2,
+    "BoardThickness": 1.6,
+    "Finish": "None"
+  },
+  "DesignRules": [
+    {
+      "Layers": "Outer",
+      "PadToPad": 0.2,
+      "PadToTrack": 0.2,
+      "TrackToTrack": 0.2,
+      "MinLineWidth": 0.2,
+      "TrackToRegion": 0.508,
+      "RegionToRegion": 0.508
+    }
+  ],
+  "FilesAttributes": [
+    {
+      "Path": "HIDHopper_Hub_Hat-F_Cu.gbr",
+      "FileFunction": "Copper,L1,Top",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "HIDHopper_Hub_Hat-B_Cu.gbr",
+      "FileFunction": "Copper,L2,Bot",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "HIDHopper_Hub_Hat-F_Paste.gbr",
+      "FileFunction": "SolderPaste,Top",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "HIDHopper_Hub_Hat-B_Paste.gbr",
+      "FileFunction": "SolderPaste,Bot",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "HIDHopper_Hub_Hat-F_Silkscreen.gbr",
+      "FileFunction": "Legend,Top",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "HIDHopper_Hub_Hat-B_Silkscreen.gbr",
+      "FileFunction": "Legend,Bot",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "HIDHopper_Hub_Hat-F_Mask.gbr",
+      "FileFunction": "SolderMask,Top",
+      "FilePolarity": "Negative"
+    },
+    {
+      "Path": "HIDHopper_Hub_Hat-B_Mask.gbr",
+      "FileFunction": "SolderMask,Bot",
+      "FilePolarity": "Negative"
+    },
+    {
+      "Path": "HIDHopper_Hub_Hat-Edge_Cuts.gbr",
+      "FileFunction": "Profile",
+      "FilePolarity": "Positive"
+    }
+  ],
+  "MaterialStackup": [
+    {
+      "Type": "Legend",
+      "Name": "Top Silk Screen"
+    },
+    {
+      "Type": "SolderPaste",
+      "Name": "Top Solder Paste"
+    },
+    {
+      "Type": "SolderMask",
+      "Thickness": 0.01,
+      "Name": "Top Solder Mask"
+    },
+    {
+      "Type": "Copper",
+      "Thickness": 0.035,
+      "Name": "F.Cu"
+    },
+    {
+      "Type": "Dielectric",
+      "Thickness": 1.51,
+      "Material": "FR4",
+      "Name": "F.Cu/B.Cu",
+      "Notes": "Type: dielectric layer 1 (from F.Cu to B.Cu)"
+    },
+    {
+      "Type": "Copper",
+      "Thickness": 0.035,
+      "Name": "B.Cu"
+    },
+    {
+      "Type": "SolderMask",
+      "Thickness": 0.01,
+      "Name": "Bottom Solder Mask"
+    },
+    {
+      "Type": "SolderPaste",
+      "Name": "Bottom Solder Paste"
+    },
+    {
+      "Type": "Legend",
+      "Name": "Bottom Silk Screen"
+    }
+  ]
+}

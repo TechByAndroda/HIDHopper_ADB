@@ -47,7 +47,7 @@ Note: This software is intended to be compiled in an Ubuntu Linux environment.
 - The build outputs (.uf2, .bin, .elf, etc) will be placed in this folder (path is from the top level of the project):
   - `src/firmware/build/src`
 - Next, plug the micro-USB side of a USB cable into HIDHopper
-- Press the button on the Pico stick with a pencil or paperclip through the indicated hole on the case
+- Press the button which is near the micro-USB port
 - While holding down the button, plug the USB cable into your computer (then release the button after plugging in)
 - You should see an "RPI-RP2" mass storage device appear on your computer
 - Drag the ".uf2" file onto that mass storage device

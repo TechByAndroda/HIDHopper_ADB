@@ -34,9 +34,9 @@
 //  See LICENSE in the root of this repository for more info.
 //----------------------------------------------------------------------------
 
-//#include <stdlib.h>
+#include <stdlib.h>
+#include <hardware/clocks.h>
 
-#include "pico/stdlib.h"
 #include "pico/multicore.h"
 #include "pico/bootrom.h"
 
